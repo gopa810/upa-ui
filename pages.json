@@ -1,0 +1,33 @@
+{
+    "main": {
+        "top": "$/top",
+        "left": "$/left",
+        "right": "$/right",
+        "bottom": "$/bottom",
+        "background": "#ffffff",
+        "subviews": {
+            "title": {
+                "class": "UILabel",
+                "text": "",
+                "top": "$../top",
+                "left": "$../left",
+                "right": "$../right",
+                "background": "lightblue"
+            },
+            "status": {
+                "class": "UIView",
+                "bottom": "$../bottom",
+                "left": "$../left",
+                "right": "$../right",
+                "background": "yellow"
+            },
+            "client": {
+                "top": "$../title/bottom",
+                "bottom": "$../status/top",
+                "left": "$../left",
+                "right": "$../right",
+                "background": "#7f7f7f"
+            }
+        }
+    }
+}
