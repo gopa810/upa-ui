@@ -1,26 +1,52 @@
 import flask
+from flask import jsonify, make_response
 import json
 import io
 import os
-
+ 
 from .window import UIWindow
+
+PORT_HTTP = 5050
 
 shared_application = None
 
 app = flask.Flask(__name__)
 
-
 @app.route('/favicon.ico')
 def get_favicon():
     return flask.send_file('images/favicon.ico')
 
-@app.route('/<windowname>')
-def index(windowname):
-    return shared_application.renderWindow(windowname)
+@app.route('/<file>')
+def index_file(file):
+    return flask.send_file('static/' + file)
+
+@app.route('/images/<file>')
+def index(file):
+    return flask.send_file('images/' + file)
+
+@app.route("/service", methods=["POST"])
+def service_request():
+    if flask.request.is_json:
+        req = flask.request.get_json()
+        if isinstance(req, list):
+            response_body = {
+                'message': 'list',
+                'response': req
+            }
+        elif isinstance(req, dict):
+            response_body = {
+                "message": "dictionary",
+                "sender": req
+            }
+        res = make_response(jsonify(response_body), 200)
+        return res
+    else:
+        return make_response(jsonify({"message": "Request body must be JSON"}), 400)
 
 @app.route('/')
 def main_index():
-    return shared_application.renderWindow('main')
+    return flask.send_file('static/main.html')
+    #return shared_application.renderWindow('main')
 
 class Application:
     def __init__(self):
@@ -30,7 +56,7 @@ class Application:
         shared_application = self
         
         self.flask_app = app
-        self.port = 5050
+        self.port = PORT_HTTP
         self.need_exit = False
         self.windows = {}
 
@@ -46,7 +72,15 @@ class Application:
         return UIWindow.html(windowname, self.windows)
 
     def start(self):
-        self.flask_app.run(port=self.port)
+        print("Starting servers...")
+        #t1 = threading.Thread(target=run_ws_server2)
+        #t1.start()
+        #socketio.run(ws_app, port=PORT_WS)
+        #run_ws_server()
+        #run_http_server()
+        self.flask_app.run(port=PORT_HTTP)
+        #asyncio.run(main_process())
+        #wsel.stop()
 
     def loadUI(self, fileid):
         data = {}
