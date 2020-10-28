@@ -7,13 +7,16 @@
         <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
         <meta http-equiv="pragma" content="no-cache" />
     </head>
-    <body style='margin:0px;padding:0px;'>
-    <script src="service.js"></script>
-    <script src="main.js"></script>
-    <script>
-        app_start();
-    </script>
-    <div id='screen' style='width:100%;height:100%;'></div>
-
+    <body style='margin:0px;padding:0px;background:black;' onresize="on_resize_screen();">
+        <script src="parseExpr.js"></script>
+        <script src="service.js"></script>
+        <script src="main.js"></script>
+        <input type=button onclick='app_start();' value="Load">
+        <div id='screen' style='position:relative;width:100%;height:80%;background:white;'>
+            <div style='font-size:18pt'>Loading content...</div>
+        </div>
+        <script>
+            //app_start();
+        </script>
     </body>
 </html>
