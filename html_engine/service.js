@@ -5,6 +5,22 @@ function ServiceAsync(url, postData) {
             "target-id": "screen",
             "data": [
                 {
+                    "control": "mainmenu", 
+                    "data": [
+                        {"text": "GCAL"},
+                        {"text": "File"},
+                        {"text": "Edit"},
+                        {
+                            "text": "Settings",
+                            "data": [
+                                { "text": "Display settings"},
+                                { "text": "Application Settings"}
+                            ]
+                        },
+                        {"text": "Help"}
+                    ]
+                },
+                {
                     "tag": "div",
                     "id": "ed1",
                     "style": "display:block;position:absolute;background:green;",
@@ -41,7 +57,7 @@ function ServiceAsync(url, postData) {
             //"html": "<div id=\"ed1\" style=\"\"></div><div style=\"position:relative;right:10px;bottom:10px;\">Some text is here<br>in second line</div>",
             "resizes": [
                 ["ed1", 0, 0, '10'],
-                ["ed1", 0, 1, '10'],
+                ["ed1", 0, 1, '50'],
                 ["ed1", 0, 4, '{screen}.width - 300'],
                 ["ed1", 0, 5, '{screen}.height / 2'],
                 ["ed1_1", 0, 0, '10'],

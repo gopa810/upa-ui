@@ -34,29 +34,81 @@ function Data2Elem(arr) {
             var e = document.createTextNode(elem);
             elements.push(e)
         } else if (typeof(elem) == 'object') {
-            var e = document.createElement(elem['tag']);
-            Object.keys(elem).forEach(key => {
-                //console.log('--------xx---aa ' + key)
-                var val = elem[key]
-                switch(key) {
-                    case '_items':
-                        for (var e2 of Data2Elem(val)) {
-                            console.log('---logs----')
-                            e.appendChild(e2)
-                        }
-                        break;
-                    case 'style':
-                        e.style = val;
-                        break;
-                    default:
-                        e.setAttribute(key, val);
-                        break;
-                }
-            })
-            elements.push(e)
+            var e = null;
+            if (elem.hasOwnProperty("tag")) {
+                e = ElementFromDataTag(elem);
+            } else if (elem.hasOwnProperty("control")) {
+                e = ElementFromControl(elem);
+            }
+            if (e) {
+                elements.push(e);
+            }
         }
     })
     return elements
+}
+
+function ElementFromDataTag(elem) {
+    var e = document.createElement(elem['tag']);
+    Object.keys(elem).forEach(key => {
+        //console.log('--------xx---aa ' + key)
+        var val = elem[key]
+        switch(key) {
+            case '_items':
+                for (var e2 of Data2Elem(val)) {
+                    console.log('---logs----')
+                    e.appendChild(e2)
+                }
+                break;
+            case 'style':
+                e.style = val;
+                break;
+            default:
+                e.setAttribute(key, val);
+                break;
+        }
+    })
+    return e;
+}
+
+function ElementFromControl(elem) {
+    var e = null;
+    switch(elem["control"]) {
+        case "mainmenu":
+            var menustyle = elem["style"];
+            var menudata = elem["data"];
+            e = document.createElement('div');
+            e.id = 'cssmenu';
+            CreateElement_Menu(e, menudata);
+            break;
+    }
+    return e;
+}
+
+function CreateElement_Menu(elem, mmdata) {
+    var count = mmdata.length;
+    if (count > 0) {
+        var elemsub = document.createElement('ul');
+        elem.appendChild(elemsub);
+        for (var index in mmdata) {
+            var e = document.createElement('li');
+            item = mmdata[index];
+            var anchor = document.createElement('a');
+            anchor.href = '#';
+            e.appendChild(anchor);
+            var span = document.createElement('span');
+            span.innerText = item['text'];
+            anchor.appendChild(span);
+            if (item.hasOwnProperty("data")) {
+                e.classList.add('has-sub');
+                CreateElement_Menu(e, item['data']);
+            }
+            if (index == count-1) {
+                e.classList.add('last');
+            }
+            elemsub.appendChild(e);
+        }
+    }
 }
 
 // argument is array
@@ -66,6 +118,7 @@ function ExecuteCommand(cmd) {
         if (cmd[0] == 'clrscr') {
             var scr = getElem('screen')
             scr.innerHTML = ""
+            g_resizes = []
         } else if (cmd[0] == 'createWindow') {
             if (cmd.length > 1) {
                 Execute_CreateWindow(cmd[1])
