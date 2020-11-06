@@ -5,57 +5,41 @@ function ServiceAsync(url, postData) {
             "target-id": "screen",
             "data": [
                 {
-                    "control": "mainmenu", 
+                    "control": "verticalgrid",
+                    "size": "full",
                     "data": [
-                        {"text": "GCAL"},
-                        {"text": "File"},
-                        {"text": "Edit"},
                         {
-                            "text": "Settings",
+                            "size": "content",
+                            "control": "mainmenu", 
                             "data": [
-                                { "text": "Display settings"},
-                                { "text": "Application Settings"}
+                                {"text": "GCAL", "action": "CmdProps"},
+                                {"text": "File", "action": ["CmdFile", "OpenFile"]},
+                                {"text": "Edit"},
+                                {
+                                    "text": "Settings",
+                                    "data": [
+                                        { "text": "Display settings"},
+                                        { "text": "Application Settings"}
+                                    ]
+                                },
+                                {"text": "Help"}
                             ]
                         },
-                        {"text": "Help"}
-                    ]
-                },
-                {
-                    "tag": "div",
-                    "id": "ed1",
-                    "style": "display:block;position:absolute;background:green;",
-                    "_items": [
                         {
-                            "tag": "div",
-                            "id": "ed1_1",
-                            "style": "background:lightblue;position:absolute"
-                        },
-                        {
-                            "tag": "div",
-                            "id": "ed1_2",
-                            "style": "background:lightblue;position:absolute"
-                        }                        
+                            "size": "full",
+                            "control": "webview",
+                            "style": {
+                                "width": "auto"
+                            },
+                            "data": {
+                                "source": "today.html"
+                            }
+                        }
                     ]
-                },
-                {
-                    "tag": "div",
-                    "id": "ed2",
-                    "style": "position:absolute;padding:18pt;border:1px solid blue;background:yellow;",
-                    "_items": [
-                        "Some text here\nin second line"
-                    ]
-                },
-                {
-                    "tag": "img",
-                    "id": "img1",
-                    "style": "position:absolute",
-                    "src": "image1.png",
-                    "width": "100px",
-                    "height": "130px"
                 }
-            ],
+            ]
             //"html": "<div id=\"ed1\" style=\"\"></div><div style=\"position:relative;right:10px;bottom:10px;\">Some text is here<br>in second line</div>",
-            "resizes": [
+            /*"resizes": [
                 ["ed1", 0, 0, '10'],
                 ["ed1", 0, 1, '50'],
                 ["ed1", 0, 4, '{screen}.width - 300'],
@@ -72,8 +56,43 @@ function ServiceAsync(url, postData) {
                 ['ed2', 0, 1, '{screen}.height - {self}.height - 20'],
                 ['img1', 0, 0, '30'],
                 ['img1', 0, 1, '{parent}.height - 120']
+            ]*/
+        }],
+        ["showDialog", {
+            "control": "verticalgrid",
+            "data": [
+                {
+                    "control": "titlebar",
+                    "plain": "Decision 0/1"
+                },
+                {
+                    "control": "verticalgrid",
+                    "padding": "8pt",
+                    "data": [{
+                        "control": "label",
+                        "plain": "Do you want to start now?"
+                    }]
+                },
+                {
+                    "control": "row-right",
+                    "padding": "8pt",
+                    "data": [
+                        {
+                            "control": "button",
+                            "plain": "OK",
+                            "action": ["CloseDialog", "Continue"]
+                        },
+                        {
+                            "control": "button",
+                            "plain": "Cancel",
+                            "action": ["CloseDialog"]
+                        },
+                    ]
+                }
             ]
-        }]]
+        }]
+   
+    ]
     ProcessMessage(
         JSON.stringify(message)
     )

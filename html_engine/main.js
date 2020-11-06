@@ -26,6 +26,20 @@ function getElem(id) {
 
 g_resizes = []
 
+function DataItem2Elem(elem) {
+    var e = null;
+    if (elem.hasOwnProperty("tag")) {
+        console.log("DataItem2Elem: Is raw tag");
+        e = ElementFromDataTag(elem);
+    } else if (elem.hasOwnProperty("control")) {
+        console.log("DataItem2Elem: Is control");
+        e = ElementFromControl(elem);
+    } else {
+        console.log("DataItem2Elem: Not recognized", elem);
+    }
+    return e;
+}
+
 function Data2Elem(arr) {
     var elements = []
     arr.forEach(elem => {
@@ -34,12 +48,7 @@ function Data2Elem(arr) {
             var e = document.createTextNode(elem);
             elements.push(e)
         } else if (typeof(elem) == 'object') {
-            var e = null;
-            if (elem.hasOwnProperty("tag")) {
-                e = ElementFromDataTag(elem);
-            } else if (elem.hasOwnProperty("control")) {
-                e = ElementFromControl(elem);
-            }
+            var e = DataItem2Elem(elem);
             if (e) {
                 elements.push(e);
             }
@@ -71,18 +80,153 @@ function ElementFromDataTag(elem) {
     return e;
 }
 
-function ElementFromControl(elem) {
-    var e = null;
-    switch(elem["control"]) {
-        case "mainmenu":
-            var menustyle = elem["style"];
-            var menudata = elem["data"];
-            e = document.createElement('div');
-            e.id = 'cssmenu';
-            CreateElement_Menu(e, menudata);
+function ElementFromControl_ApplyStyles(e, estyle, elem) {
+    if (estyle) {
+        for (var propertyName in ["margin", "padding"]) {
+            if (estyle[propertyName]) {
+                e.style.setProperty(propertyName, estyle[propertyName])
+            }
+        }
+    }
+
+    var value = elem["size"];
+    switch(value) {
+        case "full":
+            e.style.width = '100%';
+            e.style.height = '100%';
             break;
     }
+
+    value = elem["padding"];
+    if (value) {
+        e.style.padding = value;
+    }
+}
+
+function ElementFromControl_ApplyText(e, elem) {
+    if (elem['plain']) {
+        e.innerText = elem['plain'];
+    } else if (elem['html']) {
+        e.innerHTML = elem['html'];
+    }
+}
+
+
+function ServiceSym(a) {
+    console.log("Servise SYMULATION call:", a);
+}
+
+function ElementFromControl(elem) {
+    var estyle = elem["style"];
+    var edata = elem["data"];
+    var eid = elem["id"] || "";
+    var e = document.createElement('div');
+    console.log('Element from control:', elem["control"]);
+    switch(elem["control"]) {
+        case "mainmenu":
+            e.id = 'cssmenu';
+            CreateElement_Menu(e, edata);
+            break;
+        case "verticalgrid":
+            e.style.display = 'flex';
+            e.style.flexDirection = 'column';
+            //e.style.width = '100%';
+            //e.style.height = '100%';
+            CreateElement_Grid(e, edata);
+            ElementFromControl_ApplyStyles(e, estyle, elem);
+            break;
+        case "horizontalgrid":
+            //e.style.width = '100%';
+            //e.style.height = '100%';
+            e.style.display = 'flex';
+            e.style.flexDirection = 'row';
+            CreateElement_Grid(e, edata);
+            ElementFromControl_ApplyStyles(e, estyle, elem);
+            break;
+        case "webview":
+            //e.style.width = '100%';
+            //e.style.height = '100%';
+            e2 = document.createElement('iframe');
+            e2.width = '100%';
+            e2.height = '100%';
+            e.appendChild(e2);
+            if ('source' in edata) {
+                e2.src = edata['source'];
+            }
+            ElementFromControl_ApplyStyles(e, estyle, elem);
+            break;
+        case "titlebar":
+        case "label":
+            e.classList.add('upa_' + elem["control"]);
+            ElementFromControl_ApplyText(e, elem);
+            ElementFromControl_ApplyStyles(e, estyle, elem);
+            break;
+        case "button":
+            e.classList.add("upa_button");
+            ElementFromControl_ApplyText(e, elem);
+            ElementFromControl_ApplyStyles(e, estyle, elem);
+            var a1 = elem["action"];
+            if (a1) {
+                e.onclick = function () { ServiceSym({
+                    "action": a1,
+                    "source": eid
+                }) }
+            }
+            break;
+        case "row-right":
+            e.style.display = 'flex';
+            e.style.flexDirection = "row";
+            e.style.justifyContent = "flex-end";
+            CreateElement_Grid(e, edata);
+            break;
+        }
     return e;
+}
+
+function CreateElement_Grid(elem, vgdata) {
+    if (!vgdata) {
+        return;
+    }
+    var count = vgdata.length;
+    if (count > 0) {
+        for (var item of vgdata) {
+            var flex_grow = null;
+            /*console.log('======================')
+            console.log(item)
+            console.log('size = ' + item['size']);*/
+
+            /* *** analysis of parameters *** */
+            switch(item['size']) {
+                case "full":
+                    flex_grow = 2;
+                    break;
+            }
+
+            /* create element */
+            var supe = document.createElement('div');
+            if (flex_grow) {
+                supe.style.flexGrow = flex_grow;
+            }
+            var sub2 = DataItem2Elem(item);
+            supe.appendChild(sub2);
+            elem.appendChild(supe);
+        }
+    }
+}
+
+function RemoteExecuteCommand(cmd) {
+    console.log('Execute Command:')
+    console.log(cmd)
+    /* so far, we let server to execute all commands *
+     * in case we need preprocessing, do it before this point */
+    Service(cmd);
+}
+
+/* we need instance of variable in new stack of variables in order
+   to get reference for newly created function */
+function CreateOnClickMenu(a) {
+    var b = a;
+    return function() { RemoteExecuteCommand(b); };
 }
 
 function CreateElement_Menu(elem, mmdata) {
@@ -98,6 +242,10 @@ function CreateElement_Menu(elem, mmdata) {
             e.appendChild(anchor);
             var span = document.createElement('span');
             span.innerText = item['text'];
+            if (item['action']) {
+                var b = item['action'];
+                e.onclick = CreateOnClickMenu(item['action']);
+            }
             anchor.appendChild(span);
             if (item.hasOwnProperty("data")) {
                 e.classList.add('has-sub');
@@ -147,6 +295,23 @@ function ExecuteCommand(cmd) {
                     }
                 }
                 on_resize_screen()
+            }
+        } else if (cmd[0] == 'showDialog') {
+            console.log('---- showDialog -------');
+            if (cmd.length > 1 && typeof cmd[1] == "object") {
+                var args = cmd[1];
+                if (args["data"]) {
+                    var content = Data2Elem(args["data"]);
+                    var d1 = document.getElementById("dialoglayer");
+                    var d2 = document.getElementById("dialogbox");
+                    d2.innerHTML = "";
+                    console.log(content);
+                    for (var e1 of content) {
+                        console.log('appendingChild: ', e1)
+                        d2.appendChild(e1);
+                    }
+                    d1.style.display = "block";
+                }
             }
         }
     }

@@ -15,16 +15,16 @@ xmlns="http://www.w3.org/TR/REC-html40">
  <o:DocumentProperties>
   <o:Author>Peter Kollath</o:Author>
   <o:LastAuthor>Peter Kollath</o:LastAuthor>
-  <o:Revision>3</o:Revision>
-  <o:TotalTime>63</o:TotalTime>
+  <o:Revision>4</o:Revision>
+  <o:TotalTime>5307</o:TotalTime>
   <o:Created>2020-10-29T13:22:00Z</o:Created>
-  <o:LastSaved>2020-10-29T15:39:00Z</o:LastSaved>
+  <o:LastSaved>2020-11-02T07:03:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>378</o:Words>
-  <o:Characters>2155</o:Characters>
-  <o:Lines>17</o:Lines>
-  <o:Paragraphs>5</o:Paragraphs>
-  <o:CharactersWithSpaces>2528</o:CharactersWithSpaces>
+  <o:Words>544</o:Words>
+  <o:Characters>3106</o:Characters>
+  <o:Lines>25</o:Lines>
+  <o:Paragraphs>7</o:Paragraphs>
+  <o:CharactersWithSpaces>3643</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
  <o:CustomDocumentProperties>
@@ -44,6 +44,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <link rel=colorSchemeMapping href="UPA_files/colorschememapping.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
   <w:TrackMoves>false</w:TrackMoves>
   <w:TrackFormatting/>
   <w:HyphenationZone>21</w:HyphenationZone>
@@ -692,6 +694,13 @@ xmlns="http://www.w3.org/TR/REC-html40">
 	mso-generic-font-family:swiss;
 	mso-font-pitch:variable;
 	mso-font-signature:-469750017 -1073732485 9 0 511 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536869121 64767 1 0 415 0;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{mso-style-unhide:no;
@@ -1335,6 +1344,12 @@ span.FooterChar
 	mso-style-unhide:no;
 	mso-style-locked:yes;
 	mso-style-link:Footer;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -1718,7 +1733,7 @@ request:<o:p></o:p></span></p>
 format of array. Sequence of commands and arguments in one array.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>[cmd1,
-arg1, arg2, ……argN]<o:p></o:p></span></p>
+arg1, arg2, ……<span class=SpellE>argN</span>]<o:p></o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
 
@@ -1732,7 +1747,8 @@ are commands with arguments.<o:p></o:p></span></p>
 <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Example:<o:p></o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>[ [ cmd1,
-arg1, arg2, arg3 ], [ cmd2, arg1 ], …. [cmdN] ]<o:p></o:p></span></p>
+arg1, arg2, arg<span class=GramE>3 ]</span>, [ cmd2, arg1 ], …. [<span
+class=SpellE>cmdN</span><span class=GramE>] ]</span><o:p></o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
 
@@ -1742,15 +1758,15 @@ mso-bidi-font-family:"Calibri Light";mso-bidi-theme-font:major-latin;
 mso-ansi-language:EN-US'><span style='mso-list:Ignore'>1.3.1<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>Command
-clrscr<o:p></o:p></span></h3>
+<span class=SpellE>clrscr</span><o:p></o:p></span></h3>
 
 <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Clears main
 element in UI, so nothing is presented in the client area.<o:p></o:p></span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>[ 'clrscr'
-]<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>[ '<span
+class=SpellE>clrscr</span><span class=GramE>' ]</span><o:p></o:p></span></p>
 
 <h3 style='mso-list:l1 level3 lfo2'><![if !supportLists]><span lang=EN-US
 style='mso-fareast-font-family:"Calibri Light";mso-fareast-theme-font:major-latin;
@@ -1758,15 +1774,15 @@ mso-bidi-font-family:"Calibri Light";mso-bidi-theme-font:major-latin;
 mso-ansi-language:EN-US'><span style='mso-list:Ignore'>1.3.2<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>Command
-setHTML <o:p></o:p></span></h3>
+<span class=SpellE>setHTML</span> <o:p></o:p></span></h3>
 
 <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Sets given UI
 items into client area.<o:p></o:p></span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>[
-'setHTML', <i>data</i> ]<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>[ '<span
+class=SpellE>setHTML</span>', <span class=GramE><i>data</i> ]</span><o:p></o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Data is
 dictionary with these keys:<o:p></o:p></span></p>
@@ -1800,9 +1816,10 @@ dictionary with these keys:<o:p></o:p></span></p>
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-US style='mso-ansi-language:EN-US'>Value is array of UI
-  elements that are converted into HTML DOM entities and set in innerHTML
-  property of target-id element. If not present, then 'html' key is used. Each
-  UI element is dictionary with structure defined in next paragraph.<o:p></o:p></span></p>
+  elements that are converted into HTML DOM entities and set in <span
+  class=SpellE>innerHTML</span> property of target-id element. If not present,
+  then 'html' key is used. Each UI element is dictionary with structure defined
+  in next paragraph.<o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
@@ -1818,8 +1835,8 @@ dictionary with these keys:<o:p></o:p></span></p>
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-US style='mso-ansi-language:EN-US'>HTML text to be set
-  in innerHTML property of target-id element. If not present, then 'data' key
-  is used.<o:p></o:p></span></p>
+  in <span class=SpellE>innerHTML</span> property of target-id element. If not
+  present, then 'data' key is used.<o:p></o:p></span></p>
   </td>
  </tr>
 </table>
@@ -1868,7 +1885,7 @@ following keys:<o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   normal'><span lang=EN-US style='mso-ansi-language:EN-US'>Mandatory. Tag name
   of element created from this record. &quot;div&quot;, &quot;object&quot;,
-  &quot;canvas&quot;, &quot;img&quot; are examples.<o:p></o:p></span></p>
+  &quot;canvas&quot;, &quot;<span class=SpellE>img</span>&quot; are examples.<o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:1'>
@@ -1932,8 +1949,9 @@ following keys:<o:p></o:p></span></p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>Actually all keys
-  that does not start with underscore are copied into new element<o:p></o:p></span></p>
+  normal'><span class=GramE><span lang=EN-US style='mso-ansi-language:EN-US'>Actually</span></span><span
+  lang=EN-US style='mso-ansi-language:EN-US'> all keys that does not start with
+  underscore are copied into new element<o:p></o:p></span></p>
   </td>
  </tr>
 </table>
@@ -1941,10 +1959,70 @@ following keys:<o:p></o:p></span></p>
 <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
 
 <h3 style='mso-list:l1 level3 lfo2'><![if !supportLists]><span lang=EN-US
+style='mso-fareast-font-family:"Calibri Light";mso-fareast-theme-font:major-latin;
+mso-bidi-font-family:"Calibri Light";mso-bidi-theme-font:major-latin;
+mso-ansi-language:EN-US'><span style='mso-list:Ignore'>1.4.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>Implicit
+control<o:p></o:p></span></h3>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Dictionary
+with keys and values:<o:p></o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=301 valign=top style='width:225.4pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>control<o:p></o:p></span></p>
+  </td>
+  <td width=301 valign=top style='width:225.4pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Built-in
+  control<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=301 valign=top style='width:225.4pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>data<o:p></o:p></span></p>
+  </td>
+  <td width=301 valign=top style='width:225.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Optional,
+  example of control specific key<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=301 valign=top style='width:225.4pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>&lt;<i>control
+  specific keys</i>&gt;<o:p></o:p></span></p>
+  </td>
+  <td width=301 valign=top style='width:225.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Optional<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<h3 style='mso-list:l1 level3 lfo2'><![if !supportLists]><span lang=EN-US
 style='font-size:11.0pt;line-height:106%;font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
 minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin;
-mso-ansi-language:EN-US'><span style='mso-list:Ignore'>1.4.2<span
+mso-ansi-language:EN-US'><span style='mso-list:Ignore'>1.4.3<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>Explicit
 HTML text</span><span lang=EN-US style='font-size:11.0pt;line-height:106%;
@@ -1974,7 +2052,8 @@ with template:<o:p></o:p></span></p>
   <td width=95 valign=top style='width:71.6pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>&lt;param_N&gt;<o:p></o:p></span></p>
+  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>&lt;<span
+  class=SpellE>param_N</span>&gt;<o:p></o:p></span></p>
   </td>
   <td width=506 valign=top style='width:379.2pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -2003,13 +2082,15 @@ template:<o:p></o:p></span></p>
   yellow;mso-ansi-language:EN-US'>{% script: custom1.js %}</span><span
   lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
   <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>&lt;div
-  id=&quot;<span style='background:yellow;mso-highlight:yellow'>{{ id }}</span>&quot;
+  id=&quot;<span class=GramE><span style='background:yellow;mso-highlight:yellow'>{{
+  id</span></span><span style='background:yellow;mso-highlight:yellow'> }}</span>&quot;
   style=&quot;background:<span style='background:yellow;mso-highlight:yellow'>{{
   background }}</span>;color: <span style='background:yellow;mso-highlight:
   yellow'>{{ color }}</span>&quot;&gt;<o:p></o:p></span></p>
-  <p class=MsoNormal><span lang=EN-US style='background:yellow;mso-highlight:
-  yellow;mso-ansi-language:EN-US'>{{ text }}</span><span lang=EN-US
-  style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+  <p class=MsoNormal><span class=GramE><span lang=EN-US style='background:yellow;
+  mso-highlight:yellow;mso-ansi-language:EN-US'>{{ text</span></span><span
+  lang=EN-US style='background:yellow;mso-highlight:yellow;mso-ansi-language:
+  EN-US'> }}</span><span lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
   <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>&lt;/div&gt;<o:p></o:p></span></p>
   </td>
  </tr>
@@ -2053,7 +2134,9 @@ will reference this template will look like for example:<o:p></o:p></span></p>
   <td width=119 valign=top style='width:89.6pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>backgriound<o:p></o:p></span></p>
+  <p class=MsoNormal><span class=SpellE><span lang=EN-US style='mso-ansi-language:
+  EN-US'>backgriound</span></span><span lang=EN-US style='mso-ansi-language:
+  EN-US'><o:p></o:p></span></p>
   </td>
   <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -2084,6 +2167,532 @@ will reference this template will look like for example:<o:p></o:p></span></p>
 <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>There are
 some predefined templates in UI itself, if given template name is not among
 them, then UI will attempt to get HTML template from APP.<o:p></o:p></span></p>
+
+<h1 style='mso-list:l1 level1 lfo2'><![if !supportLists]><span lang=EN-US
+style='mso-fareast-font-family:"Calibri Light";mso-fareast-theme-font:major-latin;
+mso-bidi-font-family:"Calibri Light";mso-bidi-theme-font:major-latin;
+mso-ansi-language:EN-US'><span style='mso-list:Ignore'>2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>UI
+Controls<o:p></o:p></span></h1>
+
+<h2 style='mso-list:l1 level2 lfo2'><![if !supportLists]><span lang=EN-US
+style='mso-fareast-font-family:"Calibri Light";mso-fareast-theme-font:major-latin;
+mso-bidi-font-family:"Calibri Light";mso-bidi-theme-font:major-latin;
+mso-ansi-language:EN-US'><span style='mso-list:Ignore'>2.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><span lang=EN-US
+style='mso-ansi-language:EN-US'>Mainmenu</span></span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>This is main
+menu of application.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Example:<o:p></o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=601 valign=top style='width:450.8pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>{<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'><span style='mso-spacerun:yes'>  
+  </span>&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#CE9178;mso-fareast-language:SK'>&quot;<span class=SpellE>size</span>&quot;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#9CDCFE;mso-fareast-language:
+  SK'>:</span><span style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:#D4D4D4;
+  mso-fareast-language:SK'>&nbsp;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#CE9178;mso-fareast-language:SK'>&quot;<span
+  class=SpellE>content</span>&quot;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>,<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>control</span>&quot;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#9CDCFE;mso-fareast-language:
+  SK'>:</span><span style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:#D4D4D4;
+  mso-fareast-language:SK'>&nbsp;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#CE9178;mso-fareast-language:SK'>&quot;<span
+  class=SpellE>mainmenu</span>&quot;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>,&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>data</span>&quot;</span><span style='font-size:
+  10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#9CDCFE;mso-fareast-language:
+  SK'>:</span><span style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:#D4D4D4;
+  mso-fareast-language:SK'>&nbsp;[<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;text&quot;</span><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#9CDCFE;mso-fareast-language:SK'>:</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;GCAL&quot;</span><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>},<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;text&quot;</span><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#9CDCFE;mso-fareast-language:SK'>:</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>File</span>&quot;</span><span style='font-size:
+  10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#D4D4D4;mso-fareast-language:
+  SK'>},<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;text&quot;</span><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#9CDCFE;mso-fareast-language:SK'>:</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>Edit</span>&quot;</span><span style='font-size:
+  10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#D4D4D4;mso-fareast-language:
+  SK'>},<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;text&quot;</span><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#9CDCFE;mso-fareast-language:SK'>:</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>Settings</span>&quot;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#D4D4D4;mso-fareast-language:
+  SK'>,<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>data</span>&quot;</span><span style='font-size:
+  10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#9CDCFE;mso-fareast-language:
+  SK'>:</span><span style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:#D4D4D4;
+  mso-fareast-language:SK'>&nbsp;[<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;text&quot;</span><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#9CDCFE;mso-fareast-language:SK'>:</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;Display&nbsp;settings&quot;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>},<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;text&quot;</span><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#9CDCFE;mso-fareast-language:SK'>:</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;Application&nbsp;Settings&quot;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>}<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;text&quot;</span><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#9CDCFE;mso-fareast-language:SK'>:</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>Help</span>&quot;</span><span style='font-size:
+  10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#D4D4D4;mso-fareast-language:
+  SK'>}<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;]<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>}<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='mso-list:l1 level2 lfo2'><![if !supportLists]><span lang=EN-US
+style='mso-fareast-font-family:"Calibri Light";mso-fareast-theme-font:major-latin;
+mso-bidi-font-family:"Calibri Light";mso-bidi-theme-font:major-latin;
+mso-ansi-language:EN-US'><span style='mso-list:Ignore'>2.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><span lang=EN-US
+style='mso-ansi-language:EN-US'>Webview</span></span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Any HTML content,
+scrollable vertically.<o:p></o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=601 valign=top style='width:450.8pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>{<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>size</span>&quot;</span><span style='font-size:
+  10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#9CDCFE;mso-fareast-language:
+  SK'>:</span><span style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:#D4D4D4;
+  mso-fareast-language:SK'>&nbsp;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#CE9178;mso-fareast-language:SK'>&quot;<span
+  class=SpellE>full</span>&quot;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>,<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>control</span>&quot;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#9CDCFE;mso-fareast-language:
+  SK'>:</span><span style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:#D4D4D4;
+  mso-fareast-language:SK'>&nbsp;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#CE9178;mso-fareast-language:SK'>&quot;<span
+  class=SpellE>webview</span>&quot;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>,<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>style</span>&quot;</span><span style='font-size:
+  10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#9CDCFE;mso-fareast-language:
+  SK'>:</span><span style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:#D4D4D4;
+  mso-fareast-language:SK'>&nbsp;{<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'><span style='mso-spacerun:yes'>   
+  </span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#CE9178;mso-fareast-language:SK'>&quot;<span
+  class=SpellE>width</span>&quot;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#9CDCFE;mso-fareast-language:SK'>:</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#D4D4D4;mso-fareast-language:
+  SK'>&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#CE9178;mso-fareast-language:SK'>&quot;auto&quot;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#D4D4D4;mso-fareast-language:
+  SK'><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;},<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>data</span>&quot;</span><span style='font-size:
+  10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#9CDCFE;mso-fareast-language:
+  SK'>:</span><span style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:#D4D4D4;
+  mso-fareast-language:SK'>&nbsp;{<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>source</span>&quot;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#9CDCFE;mso-fareast-language:
+  SK'>:</span><span style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:#D4D4D4;
+  mso-fareast-language:SK'>&nbsp;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#CE9178;mso-fareast-language:SK'>&quot;today.html&quot;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#D4D4D4;mso-fareast-language:
+  SK'><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;}<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>}<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='mso-list:l1 level2 lfo2'><![if !supportLists]><span lang=EN-US
+style='mso-fareast-font-family:"Calibri Light";mso-fareast-theme-font:major-latin;
+mso-bidi-font-family:"Calibri Light";mso-bidi-theme-font:major-latin;
+mso-ansi-language:EN-US'><span style='mso-list:Ignore'>2.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><span lang=EN-US
+style='mso-ansi-language:EN-US'>Verticalgrid</span></span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><span lang=EN-US style='mso-ansi-language:
+EN-US'>Verticaly</span></span><span lang=EN-US style='mso-ansi-language:EN-US'>
+arranged UI elements.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Example:<o:p></o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=601 valign=top style='width:450.8pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>{<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'><span style='mso-spacerun:yes'> 
+  </span>&nbsp;&nbsp;</span><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#CE9178;mso-fareast-language:SK'>&quot;<span class=SpellE>control</span>&quot;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#9CDCFE;mso-fareast-language:
+  SK'>:</span><span style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:#D4D4D4;
+  mso-fareast-language:SK'>&nbsp;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#CE9178;mso-fareast-language:SK'>&quot;<span
+  class=SpellE>verticalgrid</span>&quot;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>,<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>data</span>&quot;</span><span style='font-size:
+  10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#9CDCFE;mso-fareast-language:
+  SK'>:</span><span style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:#D4D4D4;
+  mso-fareast-language:SK'>&nbsp;[<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+  <o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>size</span>&quot;</span><span style='font-size:
+  10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#9CDCFE;mso-fareast-language:
+  SK'>:</span><span style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:#D4D4D4;
+  mso-fareast-language:SK'>&nbsp;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#CE9178;mso-fareast-language:SK'>&quot;<span
+  class=SpellE>content</span>&quot;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>,<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*
+  <span class=SpellE>control</span> 1 */,&nbsp;<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+  style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#CE9178;mso-fareast-language:
+  SK'>&quot;<span class=SpellE>size</span>&quot;</span><span style='font-size:
+  10.5pt;font-family:Consolas;mso-fareast-font-family:"Times New Roman";
+  mso-bidi-font-family:"Times New Roman";color:#9CDCFE;mso-fareast-language:
+  SK'>:</span><span style='font-size:10.5pt;font-family:Consolas;mso-fareast-font-family:
+  "Times New Roman";mso-bidi-font-family:"Times New Roman";color:#D4D4D4;
+  mso-fareast-language:SK'>&nbsp;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#CE9178;mso-fareast-language:SK'>&quot;<span
+  class=SpellE>full</span>&quot;</span><span style='font-size:10.5pt;
+  font-family:Consolas;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:#D4D4D4;mso-fareast-language:SK'>,<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*
+  <span class=SpellE>control</span> 2 */,<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'><span style='mso-spacerun:yes'>       
+  </span><span style='mso-spacerun:yes'>  </span>...<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'><span style='mso-spacerun:yes'>       
+  </span>{<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'><span
+  style='mso-spacerun:yes'>            </span>/* <span class=SpellE>control</span>
+  N */<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'><span style='mso-spacerun:yes'>       
+  </span>}<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>&nbsp;&nbsp;&nbsp;&nbsp;]<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  14.25pt;background:#1E1E1E'><span style='font-size:10.5pt;font-family:Consolas;
+  mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+  color:#D4D4D4;mso-fareast-language:SK'>}<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
 
