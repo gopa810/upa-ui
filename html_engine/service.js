@@ -12,8 +12,8 @@ function ServiceAsync(url, postData) {
                             "size": "content",
                             "control": "mainmenu", 
                             "data": [
-                                {"text": "GCAL", "action": "CmdProps"},
-                                {"text": "File", "action": ["CmdFile", "OpenFile"]},
+                                {"text": "GCAL", "action": [ [ "CmdProps" ] ] },
+                                {"text": "File", "action": [ [ "CmdFile", "OpenFile" ] ] },
                                 {"text": "Edit"},
                                 {
                                     "text": "Settings",
@@ -80,12 +80,12 @@ function ServiceAsync(url, postData) {
                         {
                             "control": "button",
                             "plain": "OK",
-                            "action": ["CloseDialog", "Continue"]
+                            "action": [ ["CloseDialog", "Continue"] ]
                         },
                         {
                             "control": "button",
                             "plain": "Cancel",
-                            "action": ["CloseDialog"]
+                            "action": [ ["CloseDialog"] ]
                         },
                     ]
                 }

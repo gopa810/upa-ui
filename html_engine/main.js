@@ -112,10 +112,6 @@ function ElementFromControl_ApplyText(e, elem) {
 }
 
 
-function ServiceSym(a) {
-    console.log("Servise SYMULATION call:", a);
-}
-
 function ElementFromControl(elem) {
     var estyle = elem["style"];
     var edata = elem["data"];
@@ -165,12 +161,8 @@ function ElementFromControl(elem) {
             e.classList.add("upa_button");
             ElementFromControl_ApplyText(e, elem);
             ElementFromControl_ApplyStyles(e, estyle, elem);
-            var a1 = elem["action"];
-            if (a1) {
-                e.onclick = function () { ServiceSym({
-                    "action": a1,
-                    "source": eid
-                }) }
+            if (elem["action"]) {
+                e.onclick = CreateOnClickMenu(elem["action"]);
             }
             break;
         case "row-right":
@@ -217,9 +209,20 @@ function CreateElement_Grid(elem, vgdata) {
 function RemoteExecuteCommand(cmd) {
     console.log('Execute Command:')
     console.log(cmd)
+    var filtered = [];
+    for (var item of cmd) {
+        if (item[0] == 'CloseDialog') {
+            dp = document.getElementById('dialoglayer')
+            dp.style.display = 'none';
+        } else {
+            filtered.push(item);
+        }
+    }
     /* so far, we let server to execute all commands *
      * in case we need preprocessing, do it before this point */
-    Service(cmd);
+    if (filtered.length > 0) {
+        Service(filtered);
+    }
 }
 
 /* we need instance of variable in new stack of variables in order
