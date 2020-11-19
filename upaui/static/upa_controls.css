@@ -1,0 +1,31 @@
+:root {
+    --dark-bkg: rgb(0,0,32);
+    --lite-fore: rgb(255,255,255);
+    --control-top-bkg: rgb(200,200,200);
+    --control-top-hover: rgb(131, 216, 241);
+    --control-top-active: rgb(30, 78, 141);
+}
+.upa_titlebar {
+    padding: 8pt;
+    background: var(--dark-bkg);
+    color: var(--lite-fore);
+    font-weight:bold;
+}
+.upa_label {
+}
+.upa_button {
+    padding: 6pt 12pt;
+    margin: 6pt;
+    background: var(--control-top-bkg);
+    cursor: pointer;
+    display: block;
+}
+
+.upa_button:hover {
+    background: var(--control-top-hover);
+}
+
+.upa_button:active {
+    background: var(--control-top-active);
+    color: white;
+}

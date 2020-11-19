@@ -6,48 +6,16 @@
         <meta http-equiv="expires" content="0" />
         <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
         <meta http-equiv="pragma" content="no-cache" />
-        <link rel="stylesheet" href="menu_styles.css">
-        <style>
-            :root {
-                --dark-bkg: rgb(0,0,32);
-                --lite-fore: rgb(255,255,255);
-                --control-top-bkg: rgb(200,200,200);
-                --control-top-hover: rgb(131, 216, 241);
-                --control-top-active: rgb(30, 78, 141);
-            }
-            .upa_titlebar {
-                padding: 8pt;
-                background: var(--dark-bkg);
-                color: var(--lite-fore);
-                font-weight:bold;
-            }
-            .upa_label {
-            }
-            .upa_button {
-                padding: 6pt 12pt;
-                margin: 6pt;
-                background: var(--control-top-bkg);
-                cursor: pointer;
-                display: block;
-            }
-
-            .upa_button:hover {
-                background: var(--control-top-hover);
-            }
-
-            .upa_button:active {
-                background: var(--control-top-active);
-                color: white;
-            }
-        </style>
+        <link rel="stylesheet" href="static/menu_styles.css">
+        <link rel="stylesheet" href="static/upa_controls.css">
     </head>
     <body style='margin:0px;padding:0px;background:black;' onresize="on_resize_screen();">
         <script src="parseExpr.js"></script>
         <script src="service.js"></script>
         <script src="main.js"></script>
-        <input type=button onclick='app_start();' value="Load">
-        <div id='screen' style='position:relative;width:90%;height:80%;background:white;'>
+        <div id='screen' style='position:relative;width:100%;height:100%;background:white;'>
             <div style='font-size:18pt'>Loading content...</div>
+            <input type=button onclick='app_start();' value="Load">
         </div>
         <div id='dialoglayer' style='position:absolute;top:0px;bottom:0px;left:0px;right:0px;background:rgba(128,128,128,0.75);display:none;'>
             <div style='display:flex;height:100%;align-items:center;justify-content: center;'>
